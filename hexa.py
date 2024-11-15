@@ -7,7 +7,7 @@ hexNumbers = {
 
 # Converts a string hexadecimal number into an integer decimal
 # If hexNum is not a valid hexadecimal number, returns None
-def hexToDec(hexNum):
+def hexToDec(hexNum): #add the string
     try:
         DecNumber=0
         split_hexNums=list(hexNum)
