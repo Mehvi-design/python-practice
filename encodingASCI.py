@@ -9,25 +9,20 @@ def encodeString(stringVal):
             encodelist.append((prevchar,counter))#append the character and the counter in atuple in the list
             counter=0 #reset the counter
         counter +=1#increase the counter
-        prevchar=char
-    encodelist.append((prevchar,counter))
+        prevchar=char#update the prevchar so that it moves forward to stringVal[1] and so on
+    encodelist.append((prevchar,counter))#as the counter stops on the last element so this code helps add it
     return encodelist
 
 # Function to decode the Run-Length Encoded list back to the original string
 def decodeString(encodedList):
-    # Initialize an empty list to store the decoded characters
-    decodelist = []
+    # Initialize an empty string to store the decoded characters
+    decodelist = ''
     
-    # Loop through each tuple (character, count) in the encoded list
-    for char, count in encodedList:
-        # Repeat the character `count` times and add to the list
-        while count > 0:
-            decodelist.append(char)
-            count -= 1
-    
-    # Join the list into a single string and return the decoded string
-    decodestring = ''.join(decodelist)
-    return decodestring
+    # Loop through each tuple (character, count) in the encoded list as item
+    for item in encodedList:
+        #multiply item[0] with item[1] i.e character with count and add it with decodedlist
+        decodelist=decodelist+item[0]*item[1] 
+    return decodelist 
 
 
 # Example usage:
