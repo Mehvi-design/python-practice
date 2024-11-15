@@ -2,35 +2,16 @@
 def encodeString(stringVal):
     # Initialize an empty list to store the encoded tuples
     encodelist = []
-    
-    # Convert the input string into a list of characters for easier manipulation
-    stringList = list(stringVal)
-    
-    # Initialize variables
-    i = 0             # Index pointer for traversing the string
-    counter = 1       # Counter to count the occurrences of each character
-    
-    # Loop through the string until the second-last character
-    while i < len(stringVal) - 1:
-        # If the current character matches the next one, increment the counter
-        if stringList[i] == stringList[i + 1]:
-            counter += 1
-        else:
-            # If characters do not match, store the current character and its count
-            element = (stringList[i], counter)
-            encodelist.append(element)
-            
-            # Reset the counter for the next character
-            counter = 1
-        # Move to the next character
-        i += 1
-    
-    # Add the last character (or group of characters) to the list
-    encodelist.append((stringVal[i], counter))
-    
-    # Return the encoded list of tuples
+    counter=0
+    prevchar=stringVal[0] #store the previous string value
+    for char in stringVal: #go through every character in the string
+        if char!=prevchar: #if the character  is same as previous char
+            encodelist.append((prevchar,counter))#append the character and the counter in atuple in the list
+            counter=0 #reset the counter
+        counter +=1#increase the counter
+        prevchar=char
+    encodelist.append((prevchar,counter))
     return encodelist
-
 
 # Function to decode the Run-Length Encoded list back to the original string
 def decodeString(encodedList):
