@@ -35,18 +35,24 @@ def decodeStringshort(encodedList):
     return ''.join(char * count for char, count in encodedList)
 
 # Example usage:
-# Encoding the input string 'ABBCDEFFFGHIGHg'
-Inputstring = encodeString('ABBCDEFFFGHIGHg')
-print("Encoded:", Inputstring)
+inputs=["AAAAABBBBAAA","Bookkeeping"]
+for input in inputs:
+    # Encoding the input string 'ABBCDEFFFGHIGHg'
+    Inputstring = encodeString(input)
+    print("Encoded:", Inputstring)
 
-# Decoding the encoded list back to the original string
-decodedString = decodeString(Inputstring)
-print("Decoded:", decodedString)
+    # Decoding the encoded list back to the original string
+    decodedString = decodeString(Inputstring)
+    print("Decoded:", decodedString)
 
 
-# Decoding the encoded list back to the original string
-decodedString1 = decodeStringshort(Inputstring)
-print("Decoded:", decodedString1)
 
-Inputstring1 = encodeStringshort('ABBCDEFFFGHIGHg')
-print("Encoded:", Inputstring1)
+
+
+
+# # Decoding the encoded list back to the original string
+# decodedString1 = decodeStringshort(Inputstring)
+# print("Decoded:", decodedString1)
+
+# Inputstring1 = encodeStringshort('ABBCDEFFFGHIGHg')
+# print("Encoded:", Inputstring1)

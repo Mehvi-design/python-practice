@@ -24,11 +24,11 @@ def allPrimesUpToSieve_of_Eratosthenes_Algorithm(n):
     # Step 4: Collect and return all the prime numbers
     return [i for i, prime in enumerate(is_prime) if prime]
 
-# Example usage
+# # Example usage
 print(allPrimesUpToSieve_of_Eratosthenes_Algorithm(25))  # Output: [2, 3, 5, 7, 11, 13, 17, 19]
 
 
-print(allPrimesUpTo(25))
+# print(allPrimesUpTo(25))
 
 
-print(['Monty Python' if n % 6 == 0 else 'Python' if n % 3 == 0 else 'Monty' if n % 2 == 0 else n for n in range(1, 10)])
+# print(['Monty Python' if n % 6 == 0 else 'Python' if n % 3 == 0 else 'Monty' if n % 2 == 0 else n for n in range(1, 10)])

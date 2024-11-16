@@ -19,9 +19,6 @@ def factorial(num):
         return 1
     # Calculate factorial using the triangular function recursively
     return num * triangle(num - 1)
-
-# Test the factorial function with input 2
-print(factorial(2))  # Expected output: 2 * triangle(1) = 2 * 1 = 2
-
-# Test the square function with input 5
-print(square(5))     # Expected output: triangle(5) + triangle(4) = 15 + 10 = 25
+inputs=[5,6]
+for input in inputs:
+    print(f"{input}'s square is: {square(input)}")

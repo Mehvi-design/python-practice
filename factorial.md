@@ -5,9 +5,9 @@ The **factorial** of a number is that number multiplied by all the positive whol
 
 For a given number \( n \):
 
-\[
+``
 n! = n \times (n - 1) \times (n - 2) \times \ldots \times 3 \times 2 \times 1
-\]
+``
 
 ## Examples
 
@@ -49,6 +49,6 @@ The function should return the factorial of the given number.
    **Output**: `None`
 ## RESULT
 ![Factorial Challenge](images/factorial.PNG)
-)
+
 
 ---
