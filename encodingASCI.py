@@ -1,3 +1,8 @@
+from itertools import groupby
+## Function to encode a string using Run-Length Encoding (RLE) but short
+def encodeStringshort(stringVal):
+    encodeStr = [(char, len(list(group))) for char, group in groupby(stringVal)]
+    return encodeStr
 # Function to encode a string using Run-Length Encoding (RLE)
 def encodeString(stringVal):
     # Initialize an empty list to store the encoded tuples
@@ -24,6 +29,10 @@ def decodeString(encodedList):
         decodelist=decodelist+item[0]*item[1] 
     return decodelist 
 
+# Function to decode the Run-Length Encoded list back to the original string
+def decodeStringshort(encodedList):
+    # Use list comprehension and join to decode in one line
+    return ''.join(char * count for char, count in encodedList)
 
 # Example usage:
 # Encoding the input string 'ABBCDEFFFGHIGHg'
@@ -33,3 +42,11 @@ print("Encoded:", Inputstring)
 # Decoding the encoded list back to the original string
 decodedString = decodeString(Inputstring)
 print("Decoded:", decodedString)
+
+
+# Decoding the encoded list back to the original string
+decodedString1 = decodeStringshort(Inputstring)
+print("Decoded:", decodedString1)
+
+Inputstring1 = encodeStringshort('ABBCDEFFFGHIGHg')
+print("Encoded:", Inputstring1)
