@@ -1,4 +1,3 @@
-
 # Convert Hexadecimal to Decimal
 
 Hexadecimal, or **"base 16,"** uses all the numbers 0-9, plus the letters A-F to represent higher numbers:
@@ -18,12 +17,10 @@ For more information and background on the hexadecimal numbering system, you can
 ### Understanding Hexadecimal
 For example:
 - The hexadecimal number **2A** represents the decimal number **42**.
-  
+
   **Why?**
-  - The calculation is:
-    \[
-    2A_{16} = (2 \times 16^1) + (10 \times 16^0) = 32 + 10 = 42
-    \]
+  - The calculation is:  
+    `2A (base 16) = (2 × 16^1) + (10 × 16^0) = 32 + 10 = 42`
 
 ---
 
@@ -46,9 +43,7 @@ Write a function that converts a **hexadecimal string (up to three characters lo
    **Output**: `2748`
 
    **Explanation**:  
-   \[
-   ABC_{16} = (10 \times 16^2) + (11 \times 16^1) + (12 \times 16^0) = 2560 + 176 + 12 = 2748
-   \]
+   `ABC (base 16) = (10 × 16^2) + (11 × 16^1) + (12 × 16^0) = 2560 + 176 + 12 = 2748`
 
 2. **Input**: `'Not a number'`  
    **Output**: `None`
@@ -61,3 +56,4 @@ Write a function that converts a **hexadecimal string (up to three characters lo
 ![Hexadecimal to Decimal Conversion](images/hexadecimal_conversion.PNG)
 
 ---
+
