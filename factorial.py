@@ -13,6 +13,8 @@ class Answer:
 # Your function should return the factorial of the number.
 # You can edit this code to try different testing cases, which
 # will run before the challenge test cases.
-number = "spam"
-result = Answer.factorial(number)
-print(result)
+number = [5,6,"spam spam spam"]
+for num in number:
+    print(f"input: {num}")
+    result = Answer.factorial(num)
+    print(f"factorial of input is: {result}")
