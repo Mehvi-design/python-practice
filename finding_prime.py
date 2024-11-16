@@ -9,6 +9,23 @@ def allPrimesUpTo(num):
     primelist = [number for number in numlist if numlist.count(number) == 1]
     
     return primelist
+def allPrimesUpToSteve(n):
+    # Step 1: Create a list assuming all numbers from 0 to n are prime
+    is_prime = [True] * (n + 1)
+    is_prime[0] = is_prime[1] = False  # 0 and 1 are not prime numbers
+
+    # Step 2: Use the Sieve of Eratosthenes
+    for i in range(2, int(n**0.5) + 1):  # Only go up to the square root of n
+        if is_prime[i]:  # If i is still prime
+            # Step 3: Mark all multiples of i as non-prime starting from i*i
+            for j in range(i * i, n + 1, i):
+                is_prime[j] = False
+
+    # Step 4: Collect and return all the prime numbers
+    return [i for i, prime in enumerate(is_prime) if prime]
+
+# Example usage
+print(allPrimesUpToSteve(25))  # Output: [2, 3, 5, 7, 11, 13, 17, 19]
 
 
-allPrimesUpTo(1)
+print(allPrimesUpTo(25))
