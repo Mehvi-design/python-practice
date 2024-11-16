@@ -5,10 +5,20 @@ def triangle(num):
     return num + triangle(num - 1)
 
 def square(num):
-    print(num)
+    square_num=triangle(num)+triangle(num-1)
+    return square_num
+#factorial function
+def factorial(num):
+    if num==0:
+        return None
+    return num*triangle(num-1)
+
+print(factorial(2))
+print(square(5))
 
 
-triangle_number=triangle(3)
 
 
-square(triangle_number)
+
+
+
