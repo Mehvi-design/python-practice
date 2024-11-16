@@ -9,7 +9,7 @@ def allPrimesUpTo(num):
     primelist = [number for number in numlist if numlist.count(number) == 1]
     
     return primelist
-def allPrimesUpToSteve(n):
+def allPrimesUpToSieve_of_Eratosthenes_Algorithm(n):
     # Step 1: Create a list assuming all numbers from 0 to n are prime
     is_prime = [True] * (n + 1)
     is_prime[0] = is_prime[1] = False  # 0 and 1 are not prime numbers
@@ -25,7 +25,10 @@ def allPrimesUpToSteve(n):
     return [i for i, prime in enumerate(is_prime) if prime]
 
 # Example usage
-print(allPrimesUpToSteve(25))  # Output: [2, 3, 5, 7, 11, 13, 17, 19]
+print(allPrimesUpToSieve_of_Eratosthenes_Algorithm(25))  # Output: [2, 3, 5, 7, 11, 13, 17, 19]
 
 
 print(allPrimesUpTo(25))
+
+
+print(['Monty Python' if n % 6 == 0 else 'Python' if n % 3 == 0 else 'Monty' if n % 2 == 0 else n for n in range(1, 10)])
