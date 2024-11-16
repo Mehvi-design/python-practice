@@ -32,4 +32,6 @@ def hexToDec(hexNum):
     return converted
 
 # Example usage: Convert hexadecimal string 'CAB' to its decimal equivalent.
-print(hexToDec('CAB'))  # Expected output: 3243
+inputs=['ABC','Not a number']
+for input in inputs:
+    print(f"{input}'s decimal number is {hexToDec(input)}")  
