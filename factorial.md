@@ -48,6 +48,7 @@ The function should return the factorial of the given number.
 3. **Input**: `'spam spam spam'`  
    **Output**: `None`
 ## RESULT
-![Factorial Challenge](.\images\factorial.PNG)
+![Factorial Challenge](images/factorial.PNG)
+)
 
 ---
